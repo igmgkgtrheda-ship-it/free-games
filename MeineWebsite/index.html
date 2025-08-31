@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>FREE GAMES</title>
+  <style>
+html, body {
+  height: 100%;        /* ganze Höhe füllen */
+  margin: 0;           /* keine weißen Ränder */
+  padding: 0;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+  background-image: url("GameFoto.png"); /* oder Link aus dem Internet */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+    }
+    header {
+      
+      color: rgb(244, 248, 249);
+      padding: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      background-color: #090401;
+    }
+h2 {
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,.6); /* besser lesbar auf Bild */
+}
+
+p {
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,.6); /* besser lesbar auf Bild */
+}
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen auf FREE GAMES 🎉</h1>
+  </header>
+
+  <h2>Das erwatet Euch</h2>
+  
+      
+  <p>Spannende Spiele, Austausch und viel Spaß</p>
+
+ <!-- Button -->
+  <button onclick="zeigeDropdown()">Suche dir ein Spiel 🎮</button>
+
+  <!-- Dropdown-Liste -->
+  <select id="spielAuswahl" onchange="spieleWeiterleiten(this.value)">
+    <option value="">-- Wähle ein Spiel --</option>
+    <option value="https://www.roblox.com">Roblox</option>
+    <option value="https://www.cargame.com">Car Game</option>
+    <option value="https://narrow.one">Narrow One</option>
+  </select>
+
+  <script>
+    function zeigeDropdown() {
+      // Dropdown sichtbar machen
+      document.getElementById("spielAuswahl").style.display = "inline";
+    }
+
+    function spieleWeiterleiten(url) {
+      if (url) {
+        window.location.href = url; // Weiterleitung zur Website
+      }
+    }
+  </script>
+
+  <footer>
+    <p>© 2025 Meine erste Spiel Website</p>
+  </footer>
+</body>
+</html>
